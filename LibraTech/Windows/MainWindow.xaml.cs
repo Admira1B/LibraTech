@@ -11,6 +11,7 @@ namespace LibraTech.Windows
     {
         private readonly DataBase _dataBase = new();
         private ApplicationState _currentState;
+
         public MainWindow()
         {
 
@@ -50,6 +51,7 @@ namespace LibraTech.Windows
                 MessageBox.Show(e.Message);
             }
         }
+
         private void LoadReadersData()
         {
             try
@@ -177,6 +179,7 @@ namespace LibraTech.Windows
             LibrariansStackPanel.Visibility = Visibility.Collapsed;
             LoadBooksData();
         }
+
         private void BooksButton_Click(object sender, RoutedEventArgs e)
         {
             AddButton.Visibility = Visibility.Visible;
@@ -252,15 +255,8 @@ namespace LibraTech.Windows
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            switch (_currentState)
-            {
-                case ApplicationState.Readers:
-                    break;
-                case ApplicationState.Books:
-                    break;
-                case ApplicationState.IssueCards:
-                    break;
-            }
+                    DeletingWindow deletingWindow = new(_currentState);
+                    deletingWindow.ShowDialog();
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\App.xaml
-528012264
+71187322588
 
-101307333443
+12-979125299
 201451950726
-Resources\Resources.xaml;Windows\AuthorizationWindow.xaml;Windows\BookDistributionWindow.xaml;Windows\MainWindow.xaml;Windows\ReaderAddingWindow.xaml;
+Resources\Resources.xaml;Windows\AuthorizationWindow.xaml;Windows\BookDistributionWindow.xaml;Windows\DeletingWindow.xaml;Windows\MainWindow.xaml;Windows\ReaderAddingWindow.xaml;Windows\RegistrationWindows.xaml;
 
-True
+False
 

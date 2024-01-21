@@ -31,3 +31,44 @@ C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\Li
 C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\bin\Debug\net7.0-windows\Npgsql.dll
 C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CopyComplete
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.exe
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.deps.json
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.runtimeconfig.json
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.pdb
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\bin\Debug\net7.0-windows\Npgsql.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.AssemblyReference.cache
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Resources\Resources.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\AuthorizationWindow.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookDistributionWindow.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\MainWindow.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\ReaderAddingWindow.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\App.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech_MarkupCompile.cache
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech_MarkupCompile.lref
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\App.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\AuthorizationWindow.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookDistributionWindow.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\MainWindow.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\ReaderAddingWindow.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.g.resources
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.AssemblyInfoInputs.cache
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.AssemblyInfo.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CoreCompileInputs.cache
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CopyComplete
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\refint\LibraTech.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.pdb
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.genruntimeconfig.cache
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\ref\LibraTech.dll
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.baml
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.g.cs
+C:\MyFiles\Programming\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.baml
+C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.g.cs
+C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.g.cs
+C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.baml
+C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.baml

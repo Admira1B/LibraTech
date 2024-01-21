@@ -35,7 +35,7 @@
                     <TextBox Style="{DynamicResource InputTextBox}" x:Name="LoginTextBox" Margin="0,0,0,25" TextAlignment="Center" Text="Логин" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
                     <TextBox Style="{DynamicResource InputTextBox}" x:Name="PasswordTextBox" Margin="0,0,0,70" TextAlignment="Center" Text=" Пароль" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
                     <Button Style="{DynamicResource RoundedButton}" x:Name="EnterButton" Margin="0,0,0,25" Content="Войти" Width="250" Height="30" Background="#FF514F50" FontSize="18" FontWeight="Bold" Foreground="White" Click="EnterButton_Click" />
-                    <Label x:Name="RegistrationButton" MaxWidth="250" Content="Еще не зарегистрированы?" FontSize="14" HorizontalAlignment="Center" Foreground="#FF656565"/>
+                    <Label x:Name="RegistrationButton" MaxWidth="250" Content="Еще не зарегистрированы?" FontSize="14" HorizontalAlignment="Center" Foreground="#FF656565" MouseLeftButtonUp="RegistrationButton_MouseLeftButtonUp"/>
                 </StackPanel>
             </Border>
         </StackPanel>

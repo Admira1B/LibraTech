@@ -13,10 +13,16 @@
     <Compile Update="Windows\BookDistributionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\DeletingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\ReaderAddingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\RegistrationWindows.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,10 +36,16 @@
     <Page Update="Windows\BookDistributionWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\DeletingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\ReaderAddingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\RegistrationWindows.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
