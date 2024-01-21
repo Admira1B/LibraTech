@@ -1,29 +1,15 @@
 ﻿using Npgsql;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace LibraTech.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для DeletingWindow.xaml
-    /// </summary>
     public partial class DeletingWindow : Window
     {
-        DataBase dataBase = new DataBase();
-        public string query;
-        private ApplicationState _currentState;
+        private readonly DataBase dataBase = new();
+        private readonly ApplicationState _currentState;
+        private string query;
       
         public DeletingWindow(ApplicationState currentState)
         {

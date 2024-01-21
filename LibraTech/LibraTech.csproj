@@ -8,10 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Windows\back.png" />
     <None Remove="Windows\exit.png" />
     <None Remove="Windows\library_logo.png" />
     <None Remove="Windows\off.png" />
-    <None Remove="Windows\profile.png" />
+    <None Remove="Windows\refresh.png" />
     <None Remove="Windows\search.png" />
   </ItemGroup>
 
@@ -20,10 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Windows\back.png" />
     <Resource Include="Windows\exit.png" />
     <Resource Include="Windows\library_logo.png" />
     <Resource Include="Windows\off.png" />
-    <Resource Include="Windows\profile.png" />
+    <Resource Include="Windows\refresh.png" />
     <Resource Include="Windows\search.png" />
   </ItemGroup>
 

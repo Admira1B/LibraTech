@@ -1,14 +1,14 @@
 ﻿using Npgsql;
 using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
+
 
 namespace LibraTech.Windows
 {
     public partial class AuthorizationWindow : Window
     {
-        DataBase dataBase = new DataBase();
+        private readonly DataBase dataBase = new();
         public AuthorizationWindow()
         {
             InitializeComponent();
@@ -29,13 +29,14 @@ namespace LibraTech.Windows
                     try
                     {
                         dataBase.OpenConnection();
-                        string query = $@"SELECT ""PK_EmployeeID"" FROM public.""Employee"" WHERE ""Login"" = '{LoginTextBox.Text}' AND ""Password"" = '{PasswordTextBox.Text}'";
-                        NpgsqlCommand cmd = new NpgsqlCommand(query, dataBase.GetConnection());
-                        NpgsqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
+                        string query = $@"SELECT ""FK_PostID"" FROM public.""Employee"" WHERE ""Login"" = '{LoginTextBox.Text}' AND ""Password"" = '{PasswordTextBox.Text}'";
+                        NpgsqlCommand cmd = new(query, dataBase.GetConnection());
+                        var role = cmd.ExecuteScalar();
+                        if (role != null)
                         {
                             dataBase.CloseConnection();
-                            MainWindow mainWindow = new();
+
+                            MainWindow mainWindow = new(role.ToString());
                             mainWindow.Show();
                             this.Close();
                         }

@@ -12,16 +12,21 @@ namespace LibraTech.Windows
         private readonly DataBase _dataBase = new();
         private ApplicationState _currentState;
 
-        public MainWindow()
+        public MainWindow(string role)
         {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-                InitializeComponent();
-                WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            _currentState = ApplicationState.Books;
+            LoadBooksData();
+            AddButton.Visibility = Visibility.Visible;
+            DeleteButton.Visibility = Visibility.Visible;
 
-                _currentState = ApplicationState.Books;
-                LoadBooksData();
-                AddButton.Visibility = Visibility.Visible;
-                DeleteButton.Visibility = Visibility.Visible;
+            if (role == "1")
+            {
+                LibrariansRadioButton.Visibility = Visibility.Collapsed;
+                LogsRadioButton.Visibility = Visibility.Collapsed;
+            }
         }
 
 
@@ -239,7 +244,7 @@ namespace LibraTech.Windows
         }
 
 
-        // Добавление и удаление данных.
+        // Добавление, обновление и удаление данных.
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             switch (_currentState)
@@ -257,6 +262,28 @@ namespace LibraTech.Windows
         {
                     DeletingWindow deletingWindow = new(_currentState);
                     deletingWindow.ShowDialog();
+        }
+
+        private void RefreshButton_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            switch (_currentState)
+            {
+                case ApplicationState.Readers:
+                    LoadReadersData();
+                    break;
+                case ApplicationState.Books:
+                    LoadBooksData();
+                    break;
+                case ApplicationState.IssueCards:
+                    LoadIssueCardsData();
+                    break;
+                case ApplicationState.Librarians:
+                    LoadLibrariansData();
+                    break;
+                case ApplicationState.Logs:
+                    LoadLogsData();
+                    break;
+            }
         }
     }
 }

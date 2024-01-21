@@ -8,8 +8,8 @@ namespace LibraTech.Windows
 {
     public partial class RegistrationWindows : Window
     {
-        public string query;
-        DataBase dataBase = new();
+        private readonly DataBase dataBase = new();
+        private string query;
         public RegistrationWindows()
         {
             InitializeComponent();
@@ -80,6 +80,13 @@ namespace LibraTech.Windows
                 else { MessageBox.Show("Введите логин"); }
             }
             else { MessageBox.Show("Введите ФИО"); }
+        }
+
+        private void BackButton_Click(object sender, MouseButtonEventArgs e)
+        {
+            AuthorizationWindow authorizationWindow = new();
+            authorizationWindow.Show();
+            this.Close();
         }
     }
 }
