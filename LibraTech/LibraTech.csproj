@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Windows\exit.png" />
+    <None Remove="Windows\library_logo.png" />
+    <None Remove="Windows\off.png" />
+    <None Remove="Windows\profile.png" />
+    <None Remove="Windows\search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Windows\exit.png" />
+    <Resource Include="Windows\library_logo.png" />
+    <Resource Include="Windows\off.png" />
+    <Resource Include="Windows\profile.png" />
+    <Resource Include="Windows\search.png" />
+  </ItemGroup>
+
+</Project>

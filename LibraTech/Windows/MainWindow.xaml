@@ -1,0 +1,163 @@
+﻿<Window x:Class="LibraTech.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraTech.Windows"
+        mc:Ignorable="d"
+        Title="LibraTech" MinHeight="550" MinWidth="1000" MaxHeight="550" MaxWidth="1000" Background="#FFF4F4F4">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6.5*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" >
+            <Image Source="/Windows/library_logo.png" Height="45" Width="45" Margin="15,0,0,0"/>
+            <Label Content="LibraTech" FontSize="25"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+            <TextBox Style="{DynamicResource InputTextBox}" x:Name="SearchTextBox" Padding="7,0,0,0" Text="Поиск..." Width="400" Height="35" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <Image Source="/Windows/search.png" Height="40" Width="40" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Image Source="/Windows/profile.png" Height="35" Width="35" Margin="0,0,15,0" />
+            <Image Name="UnauthorizationButton" Source="/Windows/exit.png" Height="35" Width="35" Margin="0,0,15,0" MouseLeftButtonUp="UnauthorizationButton_Click" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <StackPanel.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </StackPanel.Resources>
+            <Border Background="White" MinHeight="397" MinWidth="770">
+                <StackPanel x:Name="MainStackPanel">
+                    <StackPanel x:Name="BooksStackPanel" Visibility="Collapsed">
+                        <Label Content="Книги" Margin="5,0,0,0" FontSize="20" FontWeight="Bold"/>
+                        <DataGrid x:Name="BooksGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header ="ID" Binding="{Binding PK_BookID}"/>
+                                <DataGridTextColumn Header ="Название" Width="*" Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header ="Автор" Width="*" Binding="{Binding AuthorName}"/>
+                                <DataGridTextColumn Header ="Издатель" Binding="{Binding PublisherName}"/>
+                                <DataGridTextColumn Header ="Год выпуска  " Binding="{Binding PublishingYear}"/>
+                                <DataGridTextColumn Header ="Кол-во" Binding="{Binding NumberOfBooks}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    
+                    <StackPanel x:Name="ReadersStackPanel" Visibility="Collapsed">
+                        <Label Content="Читатели" Margin="5,0,0,0" FontSize="20" FontWeight="Bold"/>
+                        <DataGrid x:Name="ReadersGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header ="ID" Binding="{Binding PK_ReaderID}"/>
+                                <DataGridTextColumn Header ="Статус" Width="*" Binding="{Binding StatusName}"/>
+                                <DataGridTextColumn Header ="Фамилия" Binding="{Binding FirstName}"/>
+                                <DataGridTextColumn Header ="Имя" Binding="{Binding SecondName}"/>
+                                <DataGridTextColumn Header ="Отчество" Binding="{Binding MiddleName}"/>
+                                <DataGridTextColumn Header ="Адрес" Width="*" Binding="{Binding Address}"/>
+                                <DataGridTextColumn Header ="Телефон" Width="*" Binding="{Binding PhoneNumber}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+
+                    <StackPanel x:Name="TakenBooksStackPanel" Visibility="Collapsed">
+                        <Label Content="Взятые книги" Margin="5,0,0,0" FontSize="20" FontWeight="Bold"/>
+                        <DataGrid x:Name="TakenBooksGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header ="ID" Binding="{Binding PK_CardID}"/>
+                                <DataGridTextColumn Header ="Читатель" Binding="{Binding FK_ReaderID}"/>
+                                <DataGridTextColumn Header ="ID книги" Binding="{Binding FK_BookID}"/>
+                                <DataGridTextColumn Header ="Кем выдано" Width="*" Binding="{Binding EmployeeName}"/>
+                                <DataGridTextColumn Header ="Дата выдачи" Binding="{Binding DateOfIssue}"/>
+                                <DataGridTextColumn Header ="Дата возврата" Binding="{Binding EstimatedReturnDate}"/>
+                                <DataGridTextColumn Header ="Дата факт.возврата" Binding="{Binding DateOfReturn}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+
+                    <StackPanel x:Name="LibrariansStackPanel" Visibility="Collapsed">
+                        <Label Content="Библиотекари" Margin="5,0,0,0" FontSize="20" FontWeight="Bold"/>
+                        <DataGrid x:Name="LibrariansGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header ="ID  " Binding="{Binding PK_EmployeeID}"/>
+                                <DataGridTextColumn Header ="ФИО" Width="*" Binding="{Binding EmployeeName}"/>
+                                <DataGridTextColumn Header ="Логин" Width="*" Binding="{Binding Login}"/>
+                                <DataGridTextColumn Header ="Пароль" Width="*" Binding="{Binding Password}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+
+                    <StackPanel x:Name="LogsStackPanel" Visibility="Visible">
+                        <Label Content="Логи ошибок" Margin="5,0,0,0" FontSize="20" FontWeight="Bold"/>
+                        <DataGrid x:Name="LogsGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header ="ID  " Binding="{Binding PK_LogID}"/>
+                                <DataGridTextColumn Header ="Возникла у  " Binding="{Binding EmployeeName}"/>
+                                <DataGridTextColumn Header ="Дата  " Binding="{Binding Date}"/>
+                                <DataGridTextColumn Header ="Сообщение" Width="*" Binding="{Binding Message}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+
+            <RadioButton IsChecked="True" Margin="25,3,10,0" x:Name="BooksRadioButton" Style="{StaticResource menuButton}" Checked="BooksRadioButton_Checked" Click="BooksButton_Click">
+                <RadioButton.Content>
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Label VerticalAlignment="Center" Content="Книги" FontSize="18"/>
+                    </Border>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton  Margin="25,3,10,0" x:Name="ReadersRadioButton" Style="{StaticResource menuButton}" Checked="ReadersRadioButton_Checked">
+                <RadioButton.Content>
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Label VerticalAlignment="Center" Content="Читатели" FontSize="18"/>
+                    </Border>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton  Margin="25,3,10,0" x:Name="CardsRadioButton" Style="{StaticResource menuButton}" Checked="CardsRadioButton_Checked">
+                <RadioButton.Content>
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Label VerticalAlignment="Center" Content="Взятые книги" FontSize="18"/>
+                    </Border>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton  Margin="25,3,10,0" x:Name="LibrariansRadioButton" Style="{StaticResource menuButton}" Checked="LibrariansRadioButton_Checked">
+                <RadioButton.Content>
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Label VerticalAlignment="Center" Content="Библиотекари" FontSize="18"/>
+                    </Border>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton  Margin="25,3,10,0" x:Name="LogsRadioButton" Style="{StaticResource menuButton}" Checked="LogsRadioButton_Checked">
+                <RadioButton.Content>
+                    <Border CornerRadius="8" Background="Transparent">
+                        <Label VerticalAlignment="Center" Content="Логи ошибок" FontSize="18"/>
+                    </Border>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Image x:Name="OffButton" Margin="15,0,0,15" Height="30" Width="30" Source="/Windows/off.png" MouseLeftButtonUp="OffButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyleMain}" Visibility="Collapsed" x:Name="AddButton" Margin="0,5,15,0" Content="Добавить" Width="100" Height="30" Click="AddButton_Click"/>
+            <Button Style="{DynamicResource ButtonStyleMain}" Visibility="Collapsed" x:Name="DeleteButton" Margin="0,5,30,0" Content="Удалить" Width="100" Click="DeleteButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
