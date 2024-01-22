@@ -197,11 +197,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vreiz\\OneDrive\\Рабочий стол\\Projects\\Учеба\\LibraTech\\LibraTech\\LibraTech.csproj",
+      "projectUniqueName": "D:\\Worktable\\Projects\\Учеба\\LibraTech\\LibraTech\\LibraTech.csproj",
       "projectName": "LibraTech",
-      "projectPath": "C:\\Users\\vreiz\\OneDrive\\Рабочий стол\\Projects\\Учеба\\LibraTech\\LibraTech\\LibraTech.csproj",
+      "projectPath": "D:\\Worktable\\Projects\\Учеба\\LibraTech\\LibraTech\\LibraTech.csproj",
       "packagesPath": "C:\\Users\\vreiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vreiz\\OneDrive\\Рабочий стол\\Projects\\Учеба\\LibraTech\\LibraTech\\obj\\",
+      "outputPath": "D:\\Worktable\\Projects\\Учеба\\LibraTech\\LibraTech\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VisualStudioSDK\\NuGetPackages"

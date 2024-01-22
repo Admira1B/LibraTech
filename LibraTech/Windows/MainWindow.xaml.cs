@@ -250,10 +250,16 @@ namespace LibraTech.Windows
             switch (_currentState)
             {
                 case ApplicationState.Readers:
+                    ReaderAddingWindow readerAddingWindow = new();
+                    readerAddingWindow.ShowDialog();
                     break;
                 case ApplicationState.Books:
+                    BookAddingWindow bookAddingWindow = new();
+                    bookAddingWindow.ShowDialog();
                     break;
                 case ApplicationState.IssueCards:
+                    BookDistribution bookDistribution = new();
+                    bookDistribution.ShowDialog();
                     break;
             }
         }

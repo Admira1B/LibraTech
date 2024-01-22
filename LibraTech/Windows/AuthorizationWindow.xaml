@@ -28,19 +28,19 @@
             <Border Background="White" MinHeight="400" MaxWidth="325">
                 <StackPanel HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
-                        <Image Height="30" Width="30" Margin="50,0,0,0" Source="/Windows/library_logo.png"/>
+                        <Image Height="30" Width="30" Margin="50,0,0,0" Source="/Images/library_logo.png"/>
                         <Label Content="LibraTech" FontSize="25"/>
                     </StackPanel>
                     <Label Margin="35,15,0,25" Content="Авторизация" FontSize="25" FontWeight="Bold"/>
                     <TextBox Style="{DynamicResource InputTextBox}" x:Name="LoginTextBox" Margin="0,0,0,25" TextAlignment="Center" Text="Логин" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-                    <TextBox Style="{DynamicResource InputTextBox}" x:Name="PasswordTextBox" Margin="0,0,0,70" TextAlignment="Center" Text=" Пароль" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+                    <TextBox Style="{DynamicResource InputTextBox}" x:Name="PasswordTextBox" Margin="0,0,0,70" TextAlignment="Center" Text="Пароль" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
                     <Button Style="{DynamicResource RoundedButton}" x:Name="EnterButton" Margin="0,0,0,25" Content="Войти" Width="250" Height="30" Background="#FF514F50" FontSize="18" FontWeight="Bold" Foreground="White" Click="EnterButton_Click" />
                     <Label x:Name="RegistrationButton" MaxWidth="250" Content="Еще не зарегистрированы?" FontSize="14" HorizontalAlignment="Center" Foreground="#FF656565" MouseLeftButtonUp="RegistrationButton_MouseLeftButtonUp"/>
                 </StackPanel>
             </Border>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left">
-            <Image x:Name="OffButton" Margin="15,0,0,0" Height="30" Width="30" Source="/Windows/off.png" MouseLeftButtonUp="OffButton_Click"/>
+            <Image x:Name="OffButton" Margin="15,0,0,0" Height="30" Width="30" Source="/Images/off.png" MouseLeftButtonUp="OffButton_Click"/>
         </StackPanel>
         
     </Grid>

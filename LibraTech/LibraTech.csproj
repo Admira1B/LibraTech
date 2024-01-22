@@ -8,12 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Windows\back.png" />
-    <None Remove="Windows\exit.png" />
-    <None Remove="Windows\library_logo.png" />
-    <None Remove="Windows\off.png" />
-    <None Remove="Windows\refresh.png" />
-    <None Remove="Windows\search.png" />
+    <None Remove="Images\back.png" />
+    <None Remove="Images\exit.png" />
+    <None Remove="Images\library_logo.png" />
+    <None Remove="Images\off.png" />
+    <None Remove="Images\refresh.png" />
+    <None Remove="Images\search.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,12 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Windows\back.png" />
-    <Resource Include="Windows\exit.png" />
-    <Resource Include="Windows\library_logo.png" />
-    <Resource Include="Windows\off.png" />
-    <Resource Include="Windows\refresh.png" />
-    <Resource Include="Windows\search.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\exit.png" />
+    <Resource Include="Images\library_logo.png" />
+    <Resource Include="Images\off.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\search.png" />
   </ItemGroup>
 
 </Project>
