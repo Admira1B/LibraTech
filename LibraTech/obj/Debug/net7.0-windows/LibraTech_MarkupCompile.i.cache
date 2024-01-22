@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\
+D:\Worktable\Projects\Учеба\LibraTech\LibraTech\obj\Debug\net7.0-windows\
 LibraTech
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\vreiz\OneDrive\Рабочий стол\Projects\Учеба\LibraTech\LibraTech\App.xaml
-71187322588
+D:\Worktable\Projects\Учеба\LibraTech\LibraTech\App.xaml
+8-492550724
 
-12-979125299
+1338658756
 201451950726
-Resources\Resources.xaml;Windows\AuthorizationWindow.xaml;Windows\BookDistributionWindow.xaml;Windows\DeletingWindow.xaml;Windows\MainWindow.xaml;Windows\ReaderAddingWindow.xaml;Windows\RegistrationWindows.xaml;
+Resources\Resources.xaml;Windows\AuthorizationWindow.xaml;Windows\BookAddingWindow.xaml;Windows\BookDistributionWindow.xaml;Windows\DeletingWindow.xaml;Windows\MainWindow.xaml;Windows\ReaderAddingWindow.xaml;Windows\RegistrationWindows.xaml;
 
-False
+True
 

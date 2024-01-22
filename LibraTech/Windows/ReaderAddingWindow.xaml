@@ -20,7 +20,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-            <Image Source="/Windows/library_logo.png" Height="40" Width="40" Margin="15,0,0,0"/>
+            <Image Source="/Images/library_logo.png" Height="40" Width="40" Margin="15,0,0,0"/>
             <Label Content="LibraTech" FontSize="25" Margin="0,10,0,0"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
@@ -43,14 +43,14 @@
             <Label Content="Адрес:" FontSize="18" Width="90" Margin="15,5,0,0"/>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left">
-            <TextBox Style="{DynamicResource InputTextBox}" x:Name="SecondnameTextBox" Margin="0,55,0,0" Text="TESTTESTTESTTESTTESTTESTTESTTEST" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-            <TextBox Style="{DynamicResource InputTextBox}" x:Name="FirstnameTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-            <TextBox Style="{DynamicResource InputTextBox}" x:Name="MiddlenameTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-            <TextBox Style="{DynamicResource InputTextBox}" x:Name="TelephoneTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-            <TextBox Style="{DynamicResource InputTextBox}" x:Name="AddressTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <TextBox Style="{DynamicResource InputTextBox}" Padding="6,0,0,0" x:Name="SecondnameTextBox" Margin="0,55,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <TextBox Style="{DynamicResource InputTextBox}" Padding="6,0,0,0" x:Name="FirstnameTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <TextBox Style="{DynamicResource InputTextBox}" Padding="6,0,0,0" x:Name="MiddlenameTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <TextBox Style="{DynamicResource InputTextBox}" Padding="6,0,0,0" x:Name="TelephoneTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+            <TextBox Style="{DynamicResource InputTextBox}" Padding="6,0,0,0" x:Name="AddressTextBox" Margin="0,10,0,0" Width="420" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2">
-            <Button Style="{DynamicResource ConfirmButton}" x:Name="AddReaderButton" Content="Принять"  Width="100" Height="30"/>
+            <Button Style="{DynamicResource ConfirmButton}" x:Name="AddReaderButton" Content="Принять"  Width="100" Height="30" Click="AddReaderButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

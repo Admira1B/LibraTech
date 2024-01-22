@@ -9,6 +9,7 @@ namespace LibraTech.Windows
         public BookDistribution()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
     }
 }

@@ -1,27 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Npgsql;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace LibraTech.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для ReaderAddingWindow.xaml
-    /// </summary>
     public partial class ReaderAddingWindow : Window
     {
+        private readonly DataBase _dataBase = new();
         public ReaderAddingWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+        private void AddReaderButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (FirstnameTextBox.Text.Length != 0 && SecondnameTextBox.Text.Length != 0 && 
+                MiddlenameTextBox.Text.Length != 0 && TelephoneTextBox.Text.Length != 0 && AddressTextBox.Text.Length != 0)
+            {
+                try
+                {
+                    _dataBase.OpenConnection();
+                    string query = (@$"INSERT INTO public.""Readers""(""FK_StatusID"", ""FirstName"", ""SecondName"", ""MiddleName"", ""Address"", ""PhoneNumber"")
+                                    values(2, '{FirstnameTextBox.Text}', '{SecondnameTextBox.Text}', '{MiddlenameTextBox.Text}', '{AddressTextBox.Text}', '{TelephoneTextBox.Text}')");
+                    NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                    cmd.ExecuteNonQuery();
+                    _dataBase.CloseConnection();
+
+                    MessageBox.Show("Читатель был успешно добавлен.");
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Тут какая-то ошибка.");
+                    _dataBase.CloseConnection();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Обратите внимание на то, чтоб все поля были заполнены!");
+            }
+
         }
     }
 }
