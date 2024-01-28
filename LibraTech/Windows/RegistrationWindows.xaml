@@ -37,7 +37,7 @@
                     <Label Margin="35,15,0,25" Content="Регистрация" FontSize="25" FontWeight="Bold"/>
                     <TextBox Style="{DynamicResource InputTextBox}" x:Name="FIOTextBox" Margin="0,0,0,25" TextAlignment="Center" Text="ФИО" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
                     <TextBox Style="{DynamicResource InputTextBox}" x:Name="LoginTextBox" Margin="0,0,0,25" TextAlignment="Center" Text="Логин" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-                    <TextBox Style="{DynamicResource InputTextBox}" x:Name="PasswordTextBox" Margin="0,0,0,70" TextAlignment="Center" Text="Пароль" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
+                    <PasswordBox Style="{DynamicResource PasswordBoxStyle}" x:Name="PasswordBox" Margin="0,0,0,70" HorizontalContentAlignment="Center" Width="250" Height="30" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
                     <Button Style="{DynamicResource RoundedButton}" x:Name="RegButton" Margin="0,0,0,25" Content="Зарегистрироваться" Width="250" Height="30" Background="#FF514F50" FontSize="18" FontWeight="Bold" Foreground="White" Click="RegButton_Click" />
                 </StackPanel>
             </Border>

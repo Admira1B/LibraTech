@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "H/2XxZuBpPtigPwdh9+erw9057tbFcYolD+GYscw6HCJiKedGdwpweAxIo7aJjcv3M/AF1E5aHhudDCBERlRKA==",
+  "dgSpecHash": "RhIj5e3Ymtn0/EHdIzE10M3hqO3emVYhyu1iEP02FCjTNun2/mVrtvwb9YG6YCcPRFsLy6zYCLmEnOeTmI+/SQ==",
   "success": true,
-  "projectFilePath": "D:\\Worktable\\Projects\\Учеба\\LibraTech\\LibraTech\\LibraTech.csproj",
+  "projectFilePath": "C:\\Users\\sk1ff\\OneDrive\\Рабочий стол\\LibraTech\\LibraTech\\LibraTech.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vreiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\vreiz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\vreiz\\.nuget\\packages\\npgsql\\8.0.1\\npgsql.8.0.1.nupkg.sha512"
+    "C:\\Users\\sk1ff\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\sk1ff\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\sk1ff\\.nuget\\packages\\npgsql\\8.0.1\\npgsql.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }

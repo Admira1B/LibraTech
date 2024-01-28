@@ -50,14 +50,14 @@ namespace LibraTech.Windows
             {
                 if (LoginTextBox.Text.Length > 0)
                 {
-                    if (PasswordTextBox.Text.Length > 0)
+                    if (PasswordBox.Password.Length > 0)
                     {
                         if (CheckForExistence())
                         {
                             try
                             {
                                 dataBase.OpenConnection();
-                                query = $@"INSERT INTO public.""Employee""(""FK_PostID"", ""EmployeeName"", ""Login"", ""Password"") values(1, '{FIOTextBox.Text}', '{LoginTextBox.Text}', '{PasswordTextBox.Text}')";
+                                query = $@"INSERT INTO public.""Employee""(""FK_PostID"", ""EmployeeName"", ""Login"", ""Password"") values(1, '{FIOTextBox.Text}', '{LoginTextBox.Text}', '{PasswordBox.Password}')";
                                 NpgsqlCommand cmd = new NpgsqlCommand(query, dataBase.GetConnection());
                                 cmd.ExecuteNonQuery();
 
@@ -69,7 +69,7 @@ namespace LibraTech.Windows
                             catch (Exception)
                             {
                                 dataBase.CloseConnection();
-                                PasswordTextBox.Text = null;
+                                PasswordBox.Password = null;
                                 MessageBox.Show("Пользователь не найден");
                             }
 

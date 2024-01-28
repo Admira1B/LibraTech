@@ -24,12 +24,12 @@ namespace LibraTech.Windows
         {
             if (LoginTextBox.Text.Length > 0)
             {
-                if (PasswordTextBox.Text.Length > 0)
+                if (PasswordBox.Password.Length > 0)
                 {
                     try
                     {
                         dataBase.OpenConnection();
-                        string query = $@"SELECT ""FK_PostID"" FROM public.""Employee"" WHERE ""Login"" = '{LoginTextBox.Text}' AND ""Password"" = '{PasswordTextBox.Text}'";
+                        string query = $@"SELECT ""FK_PostID"" FROM public.""Employee"" WHERE ""Login"" = '{LoginTextBox.Text}' AND ""Password"" = '{PasswordBox.Password}'";
                         NpgsqlCommand cmd = new(query, dataBase.GetConnection());
                         var role = cmd.ExecuteScalar();
                         if (role != null)
@@ -43,7 +43,7 @@ namespace LibraTech.Windows
                         else
                         {
                             dataBase.CloseConnection();
-                            PasswordTextBox.Text = null;
+                            PasswordBox.Password = null;
                             MessageBox.Show("Пользователь не найден");
                         }
                     }
