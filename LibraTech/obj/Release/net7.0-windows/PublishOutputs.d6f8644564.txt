@@ -1,0 +1,8 @@
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\LibraTech.exe
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\LibraTech.dll
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\LibraTech.deps.json
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\LibraTech.runtimeconfig.json
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\LibraTech.pdb
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTechRelease\Npgsql.dll

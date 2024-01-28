@@ -63,5 +63,10 @@ namespace LibraTech.Windows
             registrationWindow.Show();
             this.Close();
         }
+
+        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox.Password = null;
+        }
     }
 }
