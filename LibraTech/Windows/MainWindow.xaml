@@ -73,12 +73,11 @@
                         <DataGrid x:Name="TakenBooksGrid" CanUserAddRows="False" AutoGenerateColumns="False" Height="359" Padding="5,0,5,0" Style="{DynamicResource MainDataGridStyle}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeader}" RowHeaderStyle="{DynamicResource DataGrid}" BorderBrush="White">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header ="ID" Binding="{Binding PK_CardID}"/>
-                                <DataGridTextColumn Header ="Читатель" Binding="{Binding FK_ReaderID}"/>
-                                <DataGridTextColumn Header ="ID книги" Binding="{Binding FK_BookID}"/>
-                                <DataGridTextColumn Header ="Кем выдано" Width="*" Binding="{Binding EmployeeName}"/>
-                                <DataGridTextColumn Header ="Дата выдачи" Binding="{Binding DateOfIssue}"/>
-                                <DataGridTextColumn Header ="Дата возврата" Binding="{Binding EstimatedReturnDate}"/>
-                                <DataGridTextColumn Header ="Дата факт.возврата" Binding="{Binding DateOfReturn}"/>
+                                <DataGridTextColumn Header ="Имя читателя" Binding="{Binding FirstName}" Width="*"/>
+                                <DataGridTextColumn Header ="Фамилия читателя" Binding="{Binding SecondName}" Width="*"/>
+                                <DataGridTextColumn Header ="Название книги " Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header ="Дата выдачи" Binding="{Binding DateOfIssue}" Width="*"/>
+                                <DataGridTextColumn Header ="Дата возврата" Binding="{Binding DateOfReturn}" Width="*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </StackPanel>

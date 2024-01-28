@@ -41,7 +41,6 @@ namespace LibraTech.Windows
             {
                 MessageBox.Show("Обратите внимание на то, чтоб все поля были заполнены!");
             }
-
         }
     }
 }

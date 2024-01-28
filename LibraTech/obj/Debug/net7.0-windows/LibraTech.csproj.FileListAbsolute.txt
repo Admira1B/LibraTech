@@ -188,3 +188,42 @@ C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTech\LibraTech\obj\Debug\ne
 C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CopyComplete
 C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.genruntimeconfig.cache
 C:\Users\sk1ff\OneDrive\Рабочий стол\LibraTech\LibraTech\obj\Debug\net7.0-windows\ref\LibraTech.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.exe
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.deps.json
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.runtimeconfig.json
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\LibraTech.pdb
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\bin\Debug\net7.0-windows\Npgsql.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.AssemblyReference.cache
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Resources\Resources.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\AuthorizationWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookAddingWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookDistributionWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\MainWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\ReaderAddingWindow.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech_MarkupCompile.cache
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech_MarkupCompile.lref
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\App.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\AuthorizationWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookAddingWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\BookDistributionWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\DeletingWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\MainWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\ReaderAddingWindow.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\Windows\RegistrationWindows.baml
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.g.resources
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.AssemblyInfoInputs.cache
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.AssemblyInfo.cs
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CoreCompileInputs.cache
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.csproj.CopyComplete
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\refint\LibraTech.dll
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.pdb
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\LibraTech.genruntimeconfig.cache
+C:\Users\vreiz\Source\Repos\LibraTech\LibraTech\obj\Debug\net7.0-windows\ref\LibraTech.dll

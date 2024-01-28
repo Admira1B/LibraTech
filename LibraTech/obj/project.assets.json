@@ -191,19 +191,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sk1ff\\.nuget\\packages\\": {}
+    "C:\\Users\\vreiz\\.nuget\\packages\\": {},
+    "D:\\VisualStudioSDK\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sk1ff\\OneDrive\\Рабочий стол\\LibraTech\\LibraTech\\LibraTech.csproj",
+      "projectUniqueName": "C:\\Users\\vreiz\\Source\\Repos\\LibraTech\\LibraTech\\LibraTech.csproj",
       "projectName": "LibraTech",
-      "projectPath": "C:\\Users\\sk1ff\\OneDrive\\Рабочий стол\\LibraTech\\LibraTech\\LibraTech.csproj",
-      "packagesPath": "C:\\Users\\sk1ff\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sk1ff\\OneDrive\\Рабочий стол\\LibraTech\\LibraTech\\obj\\",
+      "projectPath": "C:\\Users\\vreiz\\Source\\Repos\\LibraTech\\LibraTech\\LibraTech.csproj",
+      "packagesPath": "C:\\Users\\vreiz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vreiz\\Source\\Repos\\LibraTech\\LibraTech\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\VisualStudioSDK\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\sk1ff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vreiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -253,7 +258,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
