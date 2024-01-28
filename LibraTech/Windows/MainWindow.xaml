@@ -23,7 +23,7 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
             <TextBox Style="{DynamicResource InputTextBox}" x:Name="SearchTextBox" Padding="7,0,0,0" Text="Поиск..." Width="400" Height="35" Background="#FFE0E0E0" FontSize="21" BorderBrush="#FFE0E0E0"/>
-            <Image Source="/Images/search.png" Height="40" Width="40" Margin="10,0,0,0"/>
+            <Image Source="/Images/search.png" Height="40" Width="40" Margin="10,0,0,0" MouseLeftButtonUp="SearchButton_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">

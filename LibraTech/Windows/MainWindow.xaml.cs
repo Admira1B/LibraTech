@@ -115,7 +115,8 @@ namespace LibraTech.Windows
             {
                 _dataBase.OpenConnection();
                 string query = (@"SELECT * FROM public.""Employee""
-                                ORDER BY ""PK_EmployeeID"" ASC ");
+                                WHERE (public.""Employee"".""FK_PostID"") = 1
+                                ORDER BY ""PK_EmployeeID"" ASC");
                 NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 if (reader != null)
@@ -243,19 +244,154 @@ namespace LibraTech.Windows
             DeleteButton.Visibility = Visibility.Collapsed;
         }
 
+        // Поиск данных.
+        private void SearchBooks() 
+        {
+            try
+            {
+                _dataBase.OpenConnection();
+                string query = (@$"SELECT *
+                                FROM public.""Books""
+                                JOIN public.""Authors"" ON public.""Books"".""FK_AuthorID""=""PK_AuthorID""
+                                JOIN public.""Publishers"" ON public.""Books"".""FK_PublisherID"" = ""PK_PublisherID""
+                                WHERE (concat(""PK_BookID"",' ',LOWER(""Name""))) LIKE '%{SearchTextBox.Text.ToLower()}%'
+                                ORDER BY ""PK_BookID"" ASC ");
+                NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    DataTable books = new();
+                    books.Load(reader);
+                    DataGrid BooksGrid = (DataGrid)this.FindName("BooksGrid");
+                    BooksGrid.ItemsSource = books.DefaultView;
+                }
+                _dataBase.CloseConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
-        // Добавление, обновление и удаление данных.
+        private void SearchReaders()
+        {
+            try
+            {
+                _dataBase.OpenConnection();
+                string query = (@$"SELECT * FROM public.""Readers""
+                                JOIN public.""Statuses"" ON public.""Readers"".""FK_StatusID""=""PK_StatusID""
+                                WHERE (concat(""PK_ReaderID"", ' ', LOWER(""FirstName""), ' ', LOWER(""SecondName""), ' ', LOWER(""MiddleName"")))
+                                LIKE '%{SearchTextBox.Text.ToLower()}%'
+                                ORDER BY ""PK_ReaderID"" ASC");
+                NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    DataTable readers = new();
+                    readers.Load(reader);
+                    DataGrid ReadersGrid = (DataGrid)this.FindName("ReadersGrid");
+                    ReadersGrid.ItemsSource = readers.DefaultView;
+                }
+                _dataBase.CloseConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void SearchCards()
+        {
+            try
+            {
+                _dataBase.OpenConnection();
+                string query = (@$"SELECT * FROM public.""IssueCard""
+                                JOIN public.""Books"" ON ""Books"".""PK_BookID"" = ""IssueCard"".""FK_BookID""
+                                JOIN public.""Employee"" ON ""Employee"".""PK_EmployeeID"" = ""IssueCard"".""FK_EmployeeID""
+                                JOIN public.""Readers"" ON ""Readers"".""PK_ReaderID"" = ""IssueCard"".""FK_ReaderID""
+                                WHERE (concat(""PK_CardID"")) LIKE '%{SearchTextBox.Text}%'
+                                ORDER BY ""PK_CardID"" ASC");
+                NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    DataTable IssueCards = new();
+                    IssueCards.Load(reader);
+                    DataGrid IssueCardsGrid = (DataGrid)this.FindName("TakenBooksGrid");
+                    IssueCardsGrid.ItemsSource = IssueCards.DefaultView;
+                }
+                _dataBase.CloseConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void SearchLibrarians()
+        {
+            try
+            {
+                _dataBase.OpenConnection();
+                string query = (@$"SELECT * FROM public.""Employee""
+                                WHERE ((""FK_PostID"" = 1) AND (concat(""PK_EmployeeID"", ' ', LOWER(""EmployeeName"")))
+                                LIKE '%{SearchTextBox.Text.ToLower()}%')
+                                ORDER BY ""PK_EmployeeID"" ASC");
+                NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    DataTable Librarians = new();
+                    Librarians.Load(reader);
+                    DataGrid LibrariansGrid = (DataGrid)this.FindName("LibrariansGrid");
+                    LibrariansGrid.ItemsSource = Librarians.DefaultView;
+                }
+                _dataBase.CloseConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void SearchLogs()
+        {
+            try
+            {
+                _dataBase.OpenConnection();
+                string query = (@$"SELECT * FROM public.""Logs""
+                                JOIN public.""Employee"" ON ""Employee"".""PK_EmployeeID"" = ""Logs"".""FK_EmployeeID""
+                                WHERE (concat(""PK_LogID"")) LIKE '%{SearchTextBox.Text}%'
+                                ORDER BY ""PK_LogID"" ASC ");
+                NpgsqlCommand cmd = new(query, _dataBase.GetConnection());
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    DataTable Logs = new();
+                    Logs.Load(reader);
+                    DataGrid LibrariansGrid = (DataGrid)this.FindName("LogsGrid");
+                    LogsGrid.ItemsSource = Logs.DefaultView;
+                }
+                _dataBase.CloseConnection();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        // Кнопки добавление, обновление, удаление, поиск данных.
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             switch (_currentState)
             {
-                case ApplicationState.Readers:
-                    ReaderAddingWindow readerAddingWindow = new();
-                    readerAddingWindow.ShowDialog();
-                    break;
                 case ApplicationState.Books:
                     BookAddingWindow bookAddingWindow = new();
                     bookAddingWindow.ShowDialog();
+                    break;
+                case ApplicationState.Readers:
+                    ReaderAddingWindow readerAddingWindow = new();
+                    readerAddingWindow.ShowDialog();
                     break;
                 case ApplicationState.IssueCards:
                     BookDistribution bookDistribution = new();
@@ -274,11 +410,57 @@ namespace LibraTech.Windows
         {
             switch (_currentState)
             {
+                case ApplicationState.Books:
+                    LoadBooksData();
+                    break;
                 case ApplicationState.Readers:
                     LoadReadersData();
                     break;
+                case ApplicationState.IssueCards:
+                    LoadIssueCardsData();
+                    break;
+                case ApplicationState.Librarians:
+                    LoadLibrariansData();
+                    break;
+                case ApplicationState.Logs:
+                    LoadLogsData();
+                    break;
+            }
+        }
+
+        private void SearchButton_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            // Если есть данные для поиска.
+            if (!string.IsNullOrWhiteSpace(SearchTextBox.Text))
+            {
+                switch (_currentState)
+                {
+                    case ApplicationState.Books:
+                        SearchBooks();
+                        return;
+                    case ApplicationState.Readers:
+                        SearchReaders();
+                        return;
+                    case ApplicationState.IssueCards:
+                        SearchCards();  
+                        return;
+                    case ApplicationState.Librarians:
+                        SearchLibrarians(); 
+                        return;
+                    case ApplicationState.Logs:
+                        SearchLogs();
+                        return;
+                }
+            }
+
+            // Пустой textbox
+            switch (_currentState)
+            {
                 case ApplicationState.Books:
                     LoadBooksData();
+                    break;
+                case ApplicationState.Readers:
+                    LoadReadersData();
                     break;
                 case ApplicationState.IssueCards:
                     LoadIssueCardsData();
